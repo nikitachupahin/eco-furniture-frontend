@@ -5,6 +5,7 @@ interface Props {
   placeholder: string;
   value: string;
   error?: string | null;
+  className?: string | null;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -14,12 +15,13 @@ export const InputGroup: React.FC<Props> = ({
   type,
   placeholder,
   error,
+  className,
   value,
   onChange,
 }) => {
   return (
-    <div className="mb-4">
-      <label htmlFor={id} className="block text-gray-700 text-sm font-bold mb-2">
+    <div className={className || 'mb-4'}>
+      <label htmlFor={id} className="block text-gray-700 text-base font-bold mb-2 leading-4">
         {label}
       </label>
       <input
@@ -29,7 +31,7 @@ export const InputGroup: React.FC<Props> = ({
         value={value}
         required
         onChange={onChange}
-        className={`shadow appearance-none border ${error ? 'border-red-500' : 'border-gray-200'} rounded w-full py-2 px-3 text-gray-700 leading-tight focus:ring-2 focus:ring-blue-400 focus:outline-none`}
+        className={`shadow appearance-none border ${error ? 'border-red-500' : 'border-primary-50'} rounded-[50px] w-full py-3 px-4 placeholder-primary-80 text-gray-700 leading-0 focus:outline-terracota`}
       />
       {error && <p className="text-red-500 text-xs italic mt-1">{error}</p>}
     </div>

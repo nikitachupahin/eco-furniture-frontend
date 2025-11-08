@@ -11,37 +11,46 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50">
-      <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-4 text-center">Sign In</h2>
-        <InputGroup
-          label="Email"
-          id="email"
-          type="email"
-          placeholder="email@gmail.com"
-          value={form.email}
-          onChange={e => setForm({ ...form, email: e.target.value })}
-          // error={'Error'}
-        />
-        <InputGroup
-          label="Password"
-          id="password"
-          type="password"
-          placeholder="********"
-          value={form.password}
-          onChange={e => setForm({ ...form, password: e.target.value })}
-          // error={'Error'}
-        />
+    <div className="h-screen bg-[url(/src/assets/images/auth-background.png)] bg-cover bg-center">
+      <div className="font-family-sans flex justify-center items-center h-full">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md"
+        >
+          <h2 className="text-2xl font-bold mb-6 text-center uppercase">Sign In</h2>
+          <InputGroup
+            label="Email"
+            id="email"
+            type="email"
+            placeholder="Email@gmail.com"
+            value={form.email}
+            onChange={e => setForm({ ...form, email: e.target.value })}
+            // error={'Error'}
+          />
+          <InputGroup
+            label="Password"
+            id="password"
+            type="password"
+            placeholder="••••••••"
+            value={form.password}
+            onChange={e => setForm({ ...form, password: e.target.value })}
+            className="mb-8"
+            // error={'Error'}
+          />
 
-        <SubmitButton>Log In</SubmitButton>
+          <SubmitButton>Login</SubmitButton>
 
-        <p className="text-center text-sm mt-4 text-gray-700">
-          Don’t have an account?{' '}
-          <Link to="/register" className="text-blue-600 hover:underline">
-            Sign Up
-          </Link>
-        </p>
-      </form>
+          <p className="text-center text-base leading-4 mt-6 text-black font-normal">
+            Don’t have an account?{' '}
+            <Link
+              to="/register"
+              className="text-primary-80 underline hover:text-terracota transition duration-300 ease-in-out focus:text-terracota focus:outline-none"
+            >
+              Sign Up
+            </Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 };
