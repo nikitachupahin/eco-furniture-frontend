@@ -25,13 +25,9 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-family-sans: 
-    'Josefin Sans', 
-    ui-sans-serif, 
-    system-ui, 
-    sans-serif;
+  --font-family-sans: 'Josefin Sans', ui-sans-serif, system-ui, sans-serif;
 
-  --color-primary-50: #AABBBC;
-  --color-primary-80: #8F9F9F;
-  --color-terracota: #D65E2B;
+  --color-primary-50: #aabbbc;
+  --color-primary-80: #8f9f9f;
+  --color-terracota: #d65e2b;
 }

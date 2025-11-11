@@ -15,7 +15,7 @@ export const InputGroup: React.FC<Props> = ({
   type,
   placeholder,
   error,
-  className,
+  className = '',
   value,
   onChange,
 }) => {
@@ -26,12 +26,12 @@ export const InputGroup: React.FC<Props> = ({
       </label>
       <input
         id={id}
+        name={id}
         type={type}
         placeholder={placeholder}
         value={value}
-        required
         onChange={onChange}
-        className={`shadow appearance-none border ${error ? 'border-red-500' : 'border-primary-50'} rounded-[50px] w-full py-3 px-4 placeholder-primary-80 text-gray-700 leading-0 focus:outline-terracota`}
+        className={`shadow appearance-none border ${error ? 'border-red-500' : 'border-primary-50'} rounded-[50px] w-full py-3 px-4 placeholder-primary-80 text-gray-700 leading-0 focus:border-transparent focus:outline-terracota outline-2 outline-transparent hover:outline-terracota hover:border-transparent transition duration-300 ease-in-out`}
       />
       {error && <p className="text-red-500 text-xs italic mt-1">{error}</p>}
     </div>
