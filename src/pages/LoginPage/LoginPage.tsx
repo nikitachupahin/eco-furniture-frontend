@@ -36,7 +36,8 @@ export const LoginPage = () => {
     };
     let isValid = true;
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // eslint-disable-next-line no-useless-escape
+    const emailRegex = /^[^@\s#\$%\^\*=<>()\[\]\{\}\\|/]+@[^@\s]+\.[^@\s]+$/;
     if (!formData.email) {
       errors.email = 'Email is required';
       isValid = false;

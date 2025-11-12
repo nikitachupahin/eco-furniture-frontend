@@ -45,7 +45,8 @@ export const RegisterPage = () => {
     };
     let isValid = true;
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // eslint-disable-next-line no-useless-escape
+    const emailRegex = /^[^@\s#\$%\^\*=<>()\[\]\{\}\\|/]+@[^@\s]+\.[^@\s]+$/;
     if (!formData.email) {
       errors.email = 'Email is required';
       isValid = false;
@@ -70,13 +71,27 @@ export const RegisterPage = () => {
       isValid = false;
     }
 
+    const nameRegex = /^[A-Za-zА-Яа-яЄєІіЇїҐґ'\s-]{3,}$/;
+
     if (!formData.firstName) {
       errors.firstName = 'First Name is required';
+      isValid = false;
+    } else if (formData.firstName.length < 3) {
+      errors.firstName = 'First Name must contain at least 3 characters';
+      isValid = false;
+    } else if (!nameRegex.test(formData.firstName)) {
+      errors.firstName = "First Name must contain only letters, ', -, space";
       isValid = false;
     }
 
     if (!formData.lastName) {
       errors.lastName = 'Last name is required';
+      isValid = false;
+    } else if (formData.lastName.length < 3) {
+      errors.lastName = 'Last Name must contain at least 3 characters';
+      isValid = false;
+    } else if (!nameRegex.test(formData.lastName)) {
+      errors.lastName = "Last Name must contain only letters, ', -, space";
       isValid = false;
     }
 
