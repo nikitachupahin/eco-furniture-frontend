@@ -1,5 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HomePage } from './pages/HomePage';
+import { LoginPage } from './pages/LoginPage';
+import { RegisterPage } from './pages/RegisterPage';
+import { ToastConfig } from './components/ToastConfig/ToastConfig';
+
 const App = () => {
-  return <h1 className="text-3xl font-bold underline">Hello World!</h1>;
+  return (
+    <Router>
+      <ToastConfig />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/registration" element={<RegisterPage />} />
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;
