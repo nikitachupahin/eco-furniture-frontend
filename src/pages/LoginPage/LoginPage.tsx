@@ -91,11 +91,11 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="h-screen bg-[url(/src/assets/images/auth-background.png)] bg-cover bg-center">
-      <div className="font-family-sans flex justify-center items-center h-full">
+    <div className="min-h-screen bg-[url(/src/assets/images/auth-background.png)] bg-cover bg-center">
+      <div className="font-family-sans flex justify-center items-center min-h-screen p-4 sm:p-6">
         <form
           onSubmit={handleSubmit}
-          className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md"
+          className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg w-full max-w-md"
         >
           <h2 className="text-2xl font-bold mb-6 text-center uppercase">Sign In</h2>
           <InputGroup
@@ -115,7 +115,7 @@ export const LoginPage = () => {
             value={formData.password}
             onChange={handleChange}
             error={validationErrors.password}
-            className="mb-8"
+            className="mb-4 sm:mb-8"
           />
 
           <SubmitButton disabled={isLoading}>{isLoading ? 'Logging in...' : 'Login'}</SubmitButton>

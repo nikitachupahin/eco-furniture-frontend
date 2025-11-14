@@ -1,19 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HomePage } from './pages/HomePage';
-import { LoginPage } from './pages/LoginPage';
-import { RegisterPage } from './pages/RegisterPage';
-import { ToastConfig } from './components/ToastConfig/ToastConfig';
+import { Outlet } from 'react-router-dom';
+import { Header } from './components/Header';
 
 const App = () => {
   return (
-    <Router>
-      <ToastConfig />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/registration" element={<RegisterPage />} />
-      </Routes>
-    </Router>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        <Outlet />
+      </main>
+    </div>
   );
 };
 
