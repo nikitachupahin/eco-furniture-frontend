@@ -22,11 +22,21 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Vibes';
+  src: url('./assets/fonts/Vibes-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import 'tailwindcss';
 
 @theme {
   --font-family-sans: 'Josefin Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-family-vibes: 'Vibes', ui-sans-serif, system-ui, sans-serif;
 
+  --color-primary-20: #D4E3E4;
   --color-primary-50: #aabbbc;
   --color-primary-80: #8f9f9f;
   --color-primary-100: #7F9193;

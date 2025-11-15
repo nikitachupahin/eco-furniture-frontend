@@ -3,7 +3,7 @@ import logoIcon from '../../assets/images/logo.png';
 import type React from 'react';
 
 interface Props {
-  onClose: () => void;
+  onClose?: () => void;
 }
 
 export const Logo: React.FC<Props> = ({ onClose }) => {

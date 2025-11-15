@@ -1,3 +1,9 @@
+import { HeroBanner } from '../../components/HeroBanner';
+
 export const HomePage = () => {
-  return <h1 className="text-2xl font-bold text-gray-800">Eco style, eco craft, eco home</h1>;
+  return (
+    <div className="py-18">
+      <HeroBanner />
+    </div>
+  );
 };
