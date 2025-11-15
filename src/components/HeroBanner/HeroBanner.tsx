@@ -34,7 +34,7 @@ export const HeroBanner = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-full">
+    <section className="relative w-full">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         spaceBetween={0}
@@ -96,6 +96,6 @@ export const HeroBanner = () => {
           opacity: 1;
         }
       `}</style>
-    </div>
+    </section>
   );
 };
