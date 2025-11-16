@@ -4,8 +4,8 @@ import sectionImg from '../../assets/images/why-eco/girl.png';
 
 export const WhyWeEcoSection = () => {
   return (
-    <section className="container mx-auto px-4 md:px-10">
-      <div className="bg-yellow-100 text-white bg-[url(/src/assets/images/why-eco/why-we-eco-background.png)] bg-cover rounded-3xl shadow-2xl">
+    <section className="container mx-auto px-4 lg:px-10">
+      <div className="bg-yellow-100 text-white bg-[url(/src/assets/images/why-eco/why-we-eco-background.png)] bg-cover rounded-3xl shadow-xl">
         <div className="relative grid grid-cols-2 lg:grid-cols-4 p-8 lg:gap-12 place-items-center">
           <div className="col-span-1 lg:col-span-1 flex items-center justify-center">
             <div className="relative">

@@ -36,10 +36,11 @@
   --font-family-sans: 'Josefin Sans', ui-sans-serif, system-ui, sans-serif;
   --font-family-vibes: 'Vibes', ui-sans-serif, system-ui, sans-serif;
 
-  --color-primary-20: #D4E3E4;
+  --color-primary-20: #d4e3e4;
   --color-primary-50: #aabbbc;
   --color-primary-80: #8f9f9f;
-  --color-primary-100: #7F9193;
+  --color-primary-100: #7f9193;
   --color-terracota: #d65e2b;
-  --color-yellow-100: #D4C165;
+  --color-yellow-100: #d4c165;
+  --color-ohra-90: #CFC8A7;
 }
