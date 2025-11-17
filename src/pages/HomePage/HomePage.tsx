@@ -1,13 +1,15 @@
 import { EcoNewsSection } from '../../components/EcoNewsSection';
 import { HeroBanner } from '../../components/HeroBanner';
+import { RoomsInspirationSection } from '../../components/RoomsInspirationSection';
 import { WhyWeEcoSection } from '../../components/WhyWeEcoSection';
 
 export const HomePage = () => {
   return (
-    <div className="py-18 flex flex-col gap-20">
+    <div className="py-12 sm:py-18 flex flex-col gap-10 sm:gap-20">
       <HeroBanner />
       <EcoNewsSection />
       <WhyWeEcoSection />
+      <RoomsInspirationSection />
     </div>
   );
 };
