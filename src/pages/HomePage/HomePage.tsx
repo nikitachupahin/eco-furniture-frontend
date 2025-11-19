@@ -1,3 +1,4 @@
+import { BestSellersSection } from '../../components/BestSellersSection/BestSellersSection';
 import { EcoNewsSection } from '../../components/EcoNewsSection';
 import { HeroBanner } from '../../components/HeroBanner';
 import { RoomsInspirationSection } from '../../components/RoomsInspirationSection';
@@ -9,6 +10,7 @@ export const HomePage = () => {
       <HeroBanner />
       <EcoNewsSection />
       <WhyWeEcoSection />
+      <BestSellersSection />
       <RoomsInspirationSection />
     </div>
   );
