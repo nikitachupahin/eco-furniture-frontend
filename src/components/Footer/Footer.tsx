@@ -11,7 +11,7 @@ export const Footer = () => {
 
   return (
     <footer className="bg-primary-100 text-white bg-[url(/src/assets/images/footer-background.png)] bg-cover">
-      <div className="bg-black border-b border-white/20">
+      <div className="block md:hidden bg-ohra-90 border-b border-white/20">
         <button
           onClick={scrollToTop}
           className="w-full py-4 flex items-center justify-center space-x-2 cursor-pointer hover:bg-white/20 duration-300 ease-in-out transition-colors"
@@ -27,7 +27,6 @@ export const Footer = () => {
           </svg>
         </button>
       </div>
-
       <div className="container mx-auto py-6 px-7 md:py-14">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 justify-items-center">
           <div className="space-y-4 text-center md:text-left">
