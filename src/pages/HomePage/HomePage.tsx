@@ -2,6 +2,7 @@ import { BestSellersSection } from '../../components/BestSellersSection/BestSell
 import { EcoNewsSection } from '../../components/EcoNewsSection';
 import { HeroBanner } from '../../components/HeroBanner';
 import { RoomsInspirationSection } from '../../components/RoomsInspirationSection';
+import { SpecialOffersSection } from '../../components/SpecialOffersSection';
 import { WhyWeEcoSection } from '../../components/WhyWeEcoSection';
 
 export const HomePage = () => {
@@ -12,6 +13,7 @@ export const HomePage = () => {
       <WhyWeEcoSection />
       <BestSellersSection />
       <RoomsInspirationSection />
+      <SpecialOffersSection />
     </div>
   );
 };

@@ -7,7 +7,7 @@ export const WhyWeEcoSection = () => {
     <section className="container mx-auto px-4 lg:px-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <div className="lg:col-span-4">
-          <div className="bg-yellow-100 rounded-3xl overflow-hidden shadow-xl h-full">
+          <div className="bg-ohra-90 rounded-3xl overflow-hidden shadow-xl h-full">
             <div className="flex items-end justify-center h-full">
               <img
                 src={sectionImg}
@@ -19,7 +19,7 @@ export const WhyWeEcoSection = () => {
         </div>
 
         <div className="lg:col-span-8">
-          <div className="bg-yellow-100 text-white bg-[url(/src/assets/images/why-eco/why-we-eco-background.png)] bg-cover rounded-3xl overflow-hidden shadow-xl h-full">
+          <div className="bg-ohra-90 text-white bg-[url(/src/assets/images/why-eco/why-we-eco-background.png)] bg-cover rounded-3xl overflow-hidden shadow-xl h-full">
             <div className="p-8 md:p-12 h-full flex flex-col justify-center">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
                 <div className="flex items-center justify-center">
