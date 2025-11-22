@@ -4,6 +4,7 @@ import { LoginPage } from './pages/LoginPage';
 import { RegisterPage } from './pages/RegisterPage';
 import { HomePage } from './pages/HomePage';
 import { ToastConfig } from './components/ToastConfig';
+import { AboutPage } from './pages/AboutPage';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: 'catalog',
         element: <div>Catalog Page</div>,
+      },
+      {
+        path: 'about',
+        element: <AboutPage />,
       },
     ],
   },

@@ -70,7 +70,7 @@ export const Menu: React.FC<Props> = ({ isOpen, onClose }) => {
           </Link>
 
           <Link
-            to="/"
+            to="/about"
             onClick={onClose}
             className="space-x-3 px-6 py-6 text-white font-normal text-3xl transition-colors uppercase relative group"
           >
