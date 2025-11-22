@@ -65,7 +65,7 @@ export const Header = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link
-                to="/"
+                to="/about"
                 className="text-white font-normal text-base transition-colors uppercase relative group"
               >
                 About
