@@ -134,11 +134,11 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div className="h-screen bg-[url(/src/assets/images/auth-background.png)] bg-cover bg-center">
-      <div className="font-family-sans flex justify-center items-center h-full">
+    <div className="min-h-screen bg-[url(/src/assets/images/auth-background.png)] bg-cover bg-center">
+      <div className="font-family-sans flex justify-center items-center min-h-screen p-4 sm:p-6">
         <form
           onSubmit={handleSubmit}
-          className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md"
+          className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg w-full max-w-md"
         >
           <h2 className="text-2xl font-bold mb-6 text-center uppercase">Sign Up</h2>
           <InputGroup
@@ -190,7 +190,7 @@ export const RegisterPage = () => {
 
           <SubmitButton disabled={isLoading}>{isLoading ? 'Loading...' : 'Sign Up'}</SubmitButton>
 
-          <p className="text-center text-base leading-4 mt-6 text-black font-normal">
+          <p className="text-center text-sm sm:text-base leading-4 mt-6 text-black font-normal">
             Already have an account?{' '}
             <Link
               to="/login"

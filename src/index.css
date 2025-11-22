@@ -22,12 +22,26 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Vibes';
+  src: url('./assets/fonts/Vibes-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import 'tailwindcss';
 
 @theme {
   --font-family-sans: 'Josefin Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-family-vibes: 'Vibes', ui-sans-serif, system-ui, sans-serif;
 
+  --color-gray-20: #F5F5F5;
+  --color-gray-100: #7D7D7D;
+  --color-primary-20: #d4e3e4;
   --color-primary-50: #aabbbc;
   --color-primary-80: #8f9f9f;
+  --color-primary-100: #7f9193;
   --color-terracota: #d65e2b;
+  --color-ohra-90: #cfc8a7;
 }
