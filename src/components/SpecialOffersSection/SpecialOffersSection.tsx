@@ -4,43 +4,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import ProductCard from '../ProductCard/ProductCard';
 import toast from 'react-hot-toast';
+import type { ProductItem } from '../../types/homePageTypes';
+import type React from 'react';
 
-const specialOffers = [
-  {
-    id: 'carnival',
-    name: 'Relaxery',
-    description: 'Textile sofa',
-    price: 1199,
-    fullPrice: 1999,
-    image: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=80',
-  },
-  {
-    id: 'castle',
-    name: 'Safari room',
-    description: 'Kitchen furniture set',
-    price: 2099,
-    fullPrice: 2813,
-    image: 'https://images.unsplash.com/photo-1503602642458-232111445657?w=600&q=80',
-  },
-  {
-    id: 'formula-1',
-    name: 'FORMULA 1',
-    description: 'Eco plastic chair',
-    price: 99,
-    fullPrice: 299,
-    image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&q=80',
-  },
-  {
-    id: 'rodeo',
-    name: 'RODEO',
-    description: 'Wooden chair',
-    price: 139,
-    fullPrice: 539,
-    image: 'https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=600&q=80',
-  },
-];
+interface Props {
+  products: ProductItem[];
+}
 
-export const SpecialOffersSection = () => {
+export const SpecialOffersSection: React.FC<Props> = ({ products }) => {
   const handleAddToCart = (productName: string) => {
     toast.success(`${productName} added to cart!`);
   };
@@ -100,15 +71,15 @@ export const SpecialOffersSection = () => {
         }}
         className="best-sellers-swiper"
       >
-        {specialOffers.map(product => (
-          <SwiperSlide key={product.id}>
+        {products.map(product => (
+          <SwiperSlide key={product.id.toString()}>
             <ProductCard
-              id={product.id}
+              id={product.id.toString()}
               name={product.name}
-              description={product.description}
-              price={product.price}
-              fullPrice={product.fullPrice}
-              image={product.image}
+              description={product.category}
+              price={product.priceWithDiscount}
+              fullPrice={product.price}
+              image={product.mainImageUrl}
               mode="discount"
               onAddToCart={() => handleAddToCart(product.name)}
             />

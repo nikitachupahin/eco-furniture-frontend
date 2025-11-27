@@ -5,7 +5,7 @@ import { SubmitButton } from '../../components/SubmitButton';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import type { AppDispatch, RootState } from '../../app/store';
-import { loginUser } from '../../features/auth/authSlice';
+import { loginUser } from '../../features/auth';
 import toast from 'react-hot-toast';
 
 export const LoginPage = () => {
