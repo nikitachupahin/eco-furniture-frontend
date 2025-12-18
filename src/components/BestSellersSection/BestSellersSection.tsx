@@ -4,67 +4,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import ProductCard from '../ProductCard/ProductCard';
 import toast from 'react-hot-toast';
+import type { ProductItem } from '../../types/homePageTypes';
+import type React from 'react';
 
-const bestSellers = [
-  {
-    id: 'carnival',
-    name: 'CARNIVAL',
-    description: 'Textile chandelier',
-    price: 299,
-    image: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=80',
-  },
-  {
-    id: 'castle',
-    name: 'CASTLE',
-    description: 'Wooden chair',
-    price: 209,
-    image: 'https://images.unsplash.com/photo-1503602642458-232111445657?w=600&q=80',
-  },
-  {
-    id: 'formula-1',
-    name: 'FORMULA 1',
-    description: 'Eco plastic chair',
-    price: 99,
-    image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&q=80',
-  },
-  {
-    id: 'rodeo',
-    name: 'RODEO',
-    description: 'Wooden chair',
-    price: 139,
-    image: 'https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=600&q=80',
-  },
-  {
-    id: 'carniva',
-    name: 'CARNIVAL',
-    description: 'Textile chandelier',
-    price: 299,
-    image: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=80',
-  },
-  {
-    id: 'castl',
-    name: 'CASTLE',
-    description: 'Wooden chair',
-    price: 209,
-    image: 'https://images.unsplash.com/photo-1503602642458-232111445657?w=600&q=80',
-  },
-  {
-    id: 'formul-1',
-    name: 'FORMULA 1',
-    description: 'Eco plastic chair',
-    price: 99,
-    image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&q=80',
-  },
-  {
-    id: 'rode',
-    name: 'RODEO',
-    description: 'Wooden chair',
-    price: 139,
-    image: 'https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=600&q=80',
-  },
-];
+interface Props {
+  products: ProductItem[];
+}
 
-export const BestSellersSection = () => {
+export const BestSellersSection: React.FC<Props> = ({ products }) => {
   const handleAddToCart = (productName: string) => {
     toast.success(`${productName} added to cart!`);
   };
@@ -128,14 +75,14 @@ export const BestSellersSection = () => {
         }}
         className="best-sellers-swiper"
       >
-        {bestSellers.map(product => (
+        {products.map(product => (
           <SwiperSlide key={product.id}>
             <ProductCard
-              id={product.id}
+              id={product.id.toString()}
               name={product.name}
-              description={product.description}
+              description={product.category}
               price={product.price}
-              image={product.image}
+              image={product.mainImageUrl}
               onAddToCart={() => handleAddToCart(product.name)}
             />
           </SwiperSlide>

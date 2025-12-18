@@ -7,7 +7,7 @@ import type {
   LoginResponse,
   RegisterData,
   RegisterResponse,
-} from './authTypes';
+} from '../../types/authTypes';
 
 const API_URL = 'http://localhost:8088/api/auth';
 

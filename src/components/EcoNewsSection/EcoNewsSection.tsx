@@ -18,7 +18,7 @@ export const EcoNewsSection = () => {
           image={img1}
           title="MONSTERRO"
           subtitle="Ecoplastic chair"
-          link="/product/monsterro"
+          link="/catalog"
           classNameProps="md:row-start-1 md:row-end-5 md:col-start-1 md:col-end-2"
         />
 
@@ -26,7 +26,7 @@ export const EcoNewsSection = () => {
           image={img2}
           title="BAMBOOCHA"
           subtitle="Rattan chandelier"
-          link="/product/bamboocha"
+          link="/catalog"
           classNameProps="md:row-start-1 md:row-end-5 md:col-start-2 md:col-end-3"
         />
 
@@ -34,7 +34,7 @@ export const EcoNewsSection = () => {
           image={img3}
           title="RATTANTHRONN"
           subtitle="Rattan chair"
-          link="/product/rattanthronn"
+          link="/catalog"
           classNameProps="md:row-start-1 md:row-end-5 md:col-start-3 md:col-end-4"
         />
 
@@ -42,7 +42,7 @@ export const EcoNewsSection = () => {
           image=""
           title=""
           subtitle=""
-          link="/news"
+          link="/about"
           isSpecial={true}
           classNameProps="md:row-start-1 md:row-end-3 md:col-start-4 md:col-end-5 order-7 md:order-none"
         />
@@ -51,7 +51,7 @@ export const EcoNewsSection = () => {
           image={img4}
           title="COUBS"
           subtitle="Bamboo boxes"
-          link="/product/coubs"
+          link="/catalog"
           classNameProps="md:row-start-5 md:row-end-7 md:col-start-1 md:col-end-2"
         />
 
@@ -59,7 +59,7 @@ export const EcoNewsSection = () => {
           image={img5}
           title="RELAXATOR"
           subtitle="Eco textile sofa"
-          link="/product/relaxator"
+          link="/catalog"
           classNameProps="col-span-2 md:row-start-5 md:row-end-7 md:col-start-2 md:col-end-4"
         />
 
@@ -67,7 +67,7 @@ export const EcoNewsSection = () => {
           image={img6}
           title="TIMEKILLER"
           subtitle="Rattan rocking chair"
-          link="/product/timekiller"
+          link="/catalog"
           classNameProps="md:row-start-3 md:row-end-7 md:col-start-4 md:col-end-5"
         />
       </div>

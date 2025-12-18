@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { InputGroup } from '../../components/InputGroup';
 import { SubmitButton } from '../../components/SubmitButton';
-import { registerUser } from '../../features/auth/authSlice';
+import { registerUser } from '../../features/auth';
 import toast from 'react-hot-toast';
 
 export const RegisterPage = () => {
