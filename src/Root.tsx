@@ -6,6 +6,8 @@ import { HomePage } from './pages/HomePage';
 import { ToastConfig } from './components/ToastConfig';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { CatalogPage } from './pages/CatalogPage';
+import { ProtectedRoute } from './components/ProtectedRoute';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'catalog',
-        element: <div>Catalog Page</div>,
+        element: (
+          <ProtectedRoute>
+            <CatalogPage />
+          </ProtectedRoute>
+        ),
       },
       {
         path: 'about',
